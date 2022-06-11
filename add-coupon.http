@@ -3,7 +3,7 @@ Content-Type: application/json
 Accept: application/json
 
 {
-"coupon_code":"CHICKENTANDOORI",
+"coupon_code":"NEWYEAR2079",
 "expiry_date":"2022-06-11 17:00:00",
 "type":"percentdiscount",
 "discount":"10"

@@ -3,5 +3,6 @@ Content-Type: application/json
 Accept: application/json
 
 {
-"coupon_code":"CHICKENTANDOORI"
+"coupon_code":"NEWYEAR2079",
+"price":"1000"
 }
