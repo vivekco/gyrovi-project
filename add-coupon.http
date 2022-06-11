@@ -1,4 +1,4 @@
-POST https://coupon-code-gyrovi.herokuapp.com/api/add-coupon
+POST https://coupon-code-gyrovi.herokuapp.com/api/post/coupon
 Content-Type: application/json
 Accept: application/json
 

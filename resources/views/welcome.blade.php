@@ -21,6 +21,7 @@
 				<center><h5>Phone For Sale</h5></center>
 				<center><h5>&#36;1000</h5></center>
 				<br />
+				<input type="hidden" id="price" value="1000"/>
 	            <center><input type="text" placeholder="Place Coupon Code Here" class="form-control col-md-3" id="codeValue"/></center><br>
                 <center><a href="#" style="color:white;" class="btn bg-primary">Check Coupon Code</a></center>
 			

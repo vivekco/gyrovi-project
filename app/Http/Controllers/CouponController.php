@@ -77,8 +77,21 @@ class CouponController extends Controller
       return response()->json($response,$code);      
     }
 
-    public function getCouponLog(){
-
+    public function getCouponLog($coupon_code){
+        $appliedArray = array();
+        $appliedCoupons = AppliedCoupon::where('coupon_code', '=', $coupon_code)->get();
+        $i = 0;
+        if(sizeof($appliedCoupons) > 0){
+        foreach ($appliedCoupons as $appliedCoupon) {
+             $appliedArray[$i]["applied on"] = $appliedCoupon->created_at;
+             $response = json_decode($appliedCoupon->response);
+             $appliedArray[$i]["redeem_status"] = $response->data->status;
+             $i += 1;
+        }
+        return response()->json(["data"=>array("status"=>"success","appliedCoupon"=>$appliedArray)],404);
+        } else {
+            return response()->json(["data"=>array("status"=>"Coupon not found!")],404);
+        }
     }
     
 }

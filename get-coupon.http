@@ -1,4 +1,4 @@
-PUT http://localhost:8000/api/get/coupon/3
+GET https://coupon-code-gyrovi.herokuapp.com/api/get/coupon/NEWYEAR2079
 Content-Type: application/json
 Accept: application/json
 

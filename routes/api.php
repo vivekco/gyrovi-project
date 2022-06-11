@@ -23,4 +23,4 @@ Route::post("/post/coupon",array(CouponController::class,'addCoupon'));
 Route::put("/update/coupon",array(CouponController::class,'updateCoupon'));
 Route::delete("/delete/coupon/{id}",array(CouponController::class,'deleteCoupon'));
 Route::post("/apply-coupon",array(CouponController::class,'applyCoupon'));
-Route::get("/get/coupon/{id}",array(CouponController::class,'getCouponLog'));
+Route::get("/get/coupon/{coupon_code}",array(CouponController::class,'getCouponLog'));
