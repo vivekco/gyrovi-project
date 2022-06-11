@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Coupon;
 use Illuminate\Http\Request;
 use App\Http\Requests\AddCoupenRequest;
+use App\Http\Requests\ApplyCouponRequest;
 use App\Http\Requests\DeleteCouponRequest;
 use App\Http\Requests\UpdateCouponRequest;
 
@@ -34,9 +35,9 @@ class CouponController extends Controller
         return response()->json(["data"=>array("status"=>"success")],200);
     }
     
-    public function applyCoupon(){
-      
+    public function applyCoupon(ApplyCouponRequest $request){
+      $input = $request->validated();
+      return response()->json(["data"=>array("status"=>"success")],200);
     }
-
-
+    
 }
