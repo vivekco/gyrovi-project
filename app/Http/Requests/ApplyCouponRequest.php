@@ -24,7 +24,8 @@ class ApplyCouponRequest extends FormRequest
     public function rules()
     {
         return [
-            'coupon_code'=>array('required')
+            'coupon_code'=>array('required'),
+            'price'=>array('required','numeric')
         ];
     }
 }

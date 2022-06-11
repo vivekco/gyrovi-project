@@ -37,7 +37,19 @@ class CouponController extends Controller
     
     public function applyCoupon(ApplyCouponRequest $request){
       $input = $request->validated();
-      return response()->json(["data"=>array("status"=>"success")],200);
+      $coupon = Coupon::where('coupon_code', '=', $input['coupon_code'])->get();
+      if(sizeof($coupon) == 1){
+        $coupon = $coupon[0];
+        //if($coupon->expiry_date > date(''))
+        if($coupon->type == "percentdiscount"){
+          $this->discountAmount = $coupon->discount*$input['price']/100;
+        } else {
+          $this->discountAmount = $coupon->discount; 
+        }
+      } else {
+        return response()->json(["data"=>array("status"=>"Coupon Code Not Found")],404);
+      }
+      
     }
     
 }
