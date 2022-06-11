@@ -1,0 +1,11 @@
+PUT http://localhost:8000/api/update-coupon
+Content-Type: application/json
+Accept: application/json
+
+{
+"id":"1",
+"coupon_code":"CHICKENTANDOORIES100",
+"expiry_date":"2022-06-11 19:00:00",
+"type":"percentdiscount",
+"discount":"10"
+}

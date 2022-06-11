@@ -20,3 +20,5 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 });
 
 Route::post("add-coupon",array(CouponController::class,'addCoupon'));
+Route::put("update-coupon",array(CouponController::class,'updateCoupon'));
+Route::delete("delete-coupon",array(CouponController::class,'deleteCoupon'));
