@@ -30,11 +30,21 @@ class CouponController extends Controller
         return response()->json(["data"=>array("status"=>"success")],200);
     }
 
-    public function deleteCoupon(DeleteCouponRequest $request){
-        $input = $request->validated();
-        $coupon = Coupon::find($input['id']);
+    public function deleteCoupon($id){
+        $request = new DeleteCouponRequest();
+        //$input = $request->validated();
+        $coupon = Coupon::find($id);
+        $response = array();
+        $code = 200;
+        if ($coupon){
         $coupon->delete();
-        return response()->json(["data"=>array("status"=>"success")],200);
+        $response = ["data"=>array("status"=>"success")];
+        } else {
+            $response = ["data"=>array("status"=>"Coupon not found!")];
+            $code = 404; 
+        
+        }
+        return response()->json($response,$code);
     }
     
     public function applyCoupon(ApplyCouponRequest $request){
@@ -54,15 +64,17 @@ class CouponController extends Controller
         $response = ["data"=>array("status"=>"Success","price"=>array("original_price"=>$input['price'],"discount"=>$this->discountAmount))];
         } else {
             $response = ["data"=>array("status"=>"Coupon Expired!")];
-            $code = 410;    
         }
       } else {
         $response = ["data"=>array("status"=>"Coupon Code Not Found!")];
-        $code = 404;
       }
       $couponLog = array("coupon_code"=>$input['coupon_code'],"request"=>json_encode($input),"response"=>json_encode($response));
       AppliedCoupon::create($couponLog);      
       return response()->json($response,$code);      
+    }
+
+    public function getCouponLog(){
+        
     }
     
 }
