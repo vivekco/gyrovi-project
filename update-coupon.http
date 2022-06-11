@@ -1,4 +1,4 @@
-PUT http://localhost:8000/api/update-coupon
+PUT https://coupon-code-gyrovi.herokuapp.com/api/update/coupon
 Content-Type: application/json
 Accept: application/json
 
