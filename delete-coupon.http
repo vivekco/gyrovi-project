@@ -1,7 +1,7 @@
-PUT http://localhost:8000/api/delete-coupon
+DELETE http://localhost:8000/api/delete-coupon
 Content-Type: application/json
 Accept: application/json
 
 {
-"id":"1"
+"coupon_code":"1"
 }

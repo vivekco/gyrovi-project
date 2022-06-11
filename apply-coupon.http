@@ -1,0 +1,7 @@
+POST http://localhost:8000/api/apply-coupon
+Content-Type: application/json
+Accept: application/json
+
+{
+"coupon_code":"C"
+}
