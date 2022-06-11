@@ -1,4 +1,4 @@
-DELETE http://localhost:8000/api/delete-coupon/2
+DELETE https://coupon-code-gyrovi.herokuapp.com/api/delete-coupon/2
 Content-Type: application/json
 Accept: application/json
 

@@ -22,12 +22,16 @@ class CouponController extends Controller
     public function updateCoupon(UpdateCouponRequest $request){
         $input = $request->validated();
         $coupon = Coupon::find($input['id']);
+        if($coupon){
         $coupon->coupon_code = $input['coupon_code'];
         $coupon->type = $input['type'];
         $coupon->expiry_date = $input['expiry_date'];
         $coupon->discount = $input['discount'];
         $coupon->save();
         return response()->json(["data"=>array("status"=>"success")],200);
+        } else {
+        return response()->json(["data"=>array("status"=>"Coupon not found!")],404);
+        }
     }
 
     public function deleteCoupon($id){
@@ -74,7 +78,7 @@ class CouponController extends Controller
     }
 
     public function getCouponLog(){
-        
+
     }
     
 }

@@ -19,8 +19,8 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-Route::post("add-coupon",array(CouponController::class,'addCoupon'));
-Route::put("update-coupon",array(CouponController::class,'updateCoupon'));
-Route::delete("delete-coupon/{id}",array(CouponController::class,'deleteCoupon'));
+Route::post("post/coupon",array(CouponController::class,'addCoupon'));
+Route::put("update/coupon",array(CouponController::class,'updateCoupon'));
+Route::delete("delete/coupon/{id}",array(CouponController::class,'deleteCoupon'));
 Route::post("apply-coupon",array(CouponController::class,'applyCoupon'));
-Route::get("coupon-log",array(CouponController::class,'getCouponLog'));
+Route::get("/get/coupon/{id}",array(CouponController::class,'getCouponLog'));

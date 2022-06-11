@@ -1,4 +1,4 @@
-POST http://localhost:8000/api/apply-coupon
+POST https://coupon-code-gyrovi.herokuapp.com/api/apply-coupon
 Content-Type: application/json
 Accept: application/json
 
