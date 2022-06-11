@@ -1,0 +1,10 @@
+POST http://localhost:8000/api/add-coupon
+Content-Type: application/json
+Accept: application/json
+
+{
+"coupon_code":"CHICKEN",
+"expiry_date":"2022-06-11 17:00:00",
+"type":"percentdiscount",
+"discount":"10"
+}
