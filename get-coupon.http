@@ -1,4 +1,4 @@
-GET https://coupon-code-gyrovi.herokuapp.com/api/get/coupon/NEWYEAR2079
+GET https://coupon-code-gyrovi.herokuapp.com/api/get/coupon/NAR2079
 Content-Type: application/json
 Accept: application/json
 

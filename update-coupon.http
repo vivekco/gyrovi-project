@@ -4,7 +4,7 @@ Accept: application/json
 
 {
 "id":"4",
-"coupon_code":"CHICKENTANDOORIES100",
+"coupon_code":"CHICKENTANDOORIES1000",
 "expiry_date":"2022-06-12 19:00:00",
 "type":"percentdiscount",
 "discount":"10"

@@ -88,7 +88,7 @@ class CouponController extends Controller
              $appliedArray[$i]["redeem_status"] = $response->data->status;
              $i += 1;
         }
-        return response()->json(["data"=>array("status"=>"success","appliedCoupon"=>$appliedArray)],404);
+        return response()->json(["data"=>array("status"=>"success","appliedCoupon"=>$appliedArray)],200);
         } else {
             return response()->json(["data"=>array("status"=>"Coupon not found!")],404);
         }

@@ -14,7 +14,7 @@ class DeleteCouponTest extends TestCase
     public function testDeleteCoupon()
     {
 
-    $response = $this->call('DELETE', 'instrument/19');
+    $response = $this->call('DELETE', 'Coupon/19');
 
     $this->assertEquals(200, $response->getStatusCode());
         $this->assertTrue(true);
