@@ -65,7 +65,7 @@ class CouponController extends Controller
         } else {
           $this->discountAmount = $coupon->discount; 
         }
-        $response = ["data"=>array("status"=>"Success","price"=>array("original_price"=>$input['price'],"discount"=>$this->discountAmount))];
+        $response = ["data"=>array("status"=>"Success","price"=>array("original_price"=>$input['price'],"discount"=>$this->discountAmount,"discount_type"=>$coupon->type,"discount_v"=>$coupon->discount))];
         } else {
             $response = ["data"=>array("status"=>"Coupon Expired!")];
         }
